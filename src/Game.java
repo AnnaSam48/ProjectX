@@ -1,7 +1,7 @@
 public class Game {
-    public static void main(String[] args) {
-
-
+//    public static void main(String[] args) {
+//
+//
         final int ROWCOUNT = 4;
         final int COLUMNCOUNT = 4;
         int[][] board = new int[ROWCOUNT][COLUMNCOUNT];
@@ -10,27 +10,28 @@ public class Game {
         int newTileGenerated = 2;
         Game newGame = new Game();
         UserInputOutput userInputOutput = new UserInputOutput();
-
+        char userMoveInput = userInputOutput.getUserInput();
+//
        do {
             newGame.createTile();
-           char userMoveInput = userInputOutput.getUserInput();
 
-            if (userMoveInput.equals('w')) {
-                newGame.moveUp();
+           if (userMoveInput == ('w')) {
+              newGame.moveUp();
 
-            } else if (userMoveInput.equals('s')) {
+            } else if (userMoveInput ==('s')) {
                 newGame.moveDown();
 
-            } else if (userMoveInput.equals('a')) {
+            } else if (userMoveInput ==('a')) {
                 newGame.moveLeft();
 
-            } else if (userMoveInput.equals('d')) {
+            } else if (userMoveInput ==('d')) {
                 newGame.moveRight();
 
             } else {
+               if(userMoveInput == ('?')){
             throw new IllegalArgumentException("Invalid input, please use 'a', 's', 'd', 'w'");
-            }
-       }
+          }
+       }while(userMoveInput!=('?'));
 //
 //
 ////
@@ -39,20 +40,24 @@ public class Game {
 //                    return userInput;
 ////
 //        }
-//            while (boardIsEmpty) {
-//                int rowIndex = (int) (Math.random() * (ROWCOUNT -1));
-//                int columnIndex = (int) (Math.random() * (COLUMNCOUNT -1));
-//                if (board[rowIndex][columnIndex] == 0) {
-//                    board[rowIndex][columnIndex] = newTileGenerated;
-//                    tilesWithValue++;
-//                    if (tilesWithValue == 16) {
-//                        boardIsEmpty = false;
-//                        userInputOutput.endGame();
-//                        //add method from UserInputOutput Class with end game message and final score
-//                    }
+
+            public int createTile(){
+                while (boardIsEmpty) {
+                int rowIndex = (int) (Math.random() * (ROWCOUNT -1));
+                int columnIndex = (int) (Math.random() * (COLUMNCOUNT -1));
+                if (board[rowIndex][columnIndex] == 0) {
+                    board[rowIndex][columnIndex] = newTileGenerated;
+                    tilesWithValue++;
+                    if (tilesWithValue == 16) {
+                        boardIsEmpty = false;
+                        userInputOutput.endGame();
+                        //add method from UserInputOutput Class with end game message and final score
+                    }
 //                }
 //            }
+            }
+//
 
 
-    }
+    //}
 }
