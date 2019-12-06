@@ -21,7 +21,7 @@ We use [GitHub](https://github.com/) for versioning. For the versions available,
 
 * **Inga Riharda** - *Initial work*
 * **Rūta Saldābola** - *Initial work*
-* **Anna Samnorska** - *Initial work*
+* **Anna Samborska** - *Initial work*
 
 ## Acknowledgments
 
