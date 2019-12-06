@@ -8,6 +8,7 @@ public class UserInputOutput {
 //        System.out.println("The tiles (according to your direction input) with same values will merge and their value will sum up.");
 //        System.out.println("Can you get to 2048? We shall see... We wish you best of luck!");
 //    }
+
     public String getUserInput() {
         Scanner move = new Scanner(System.in);
         System.out.println("Please move with letters: 'a' 's' 'd' or 'w'");
@@ -17,6 +18,6 @@ public class UserInputOutput {
 
     public void endGame() {
         System.out.println("Congratulations!");
-        System.out.println("Your score: ");
+      //  System.out.println("Your score: " +score);
     }
 }
