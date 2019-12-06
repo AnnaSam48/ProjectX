@@ -27,5 +27,5 @@ We use [GitHub](https://github.com/) for versioning. For the versions available,
 
 * **Gabriele Cirulli** - *original creator of the game*
 * **Jurijs Grabovskis** - *SGT Java 2 group teacher and mentor and major help with this project*
-* **Accenture Latvia** - *provider of the opportunity to learn how to make this project* (https://www.accenture.com/lv-en)
-* **Riga TechGirls** - *provider of the opportunity to learn how to make this project* (http://www.rigatechgirls.org/)
+* **[Accenture Latvia](https://www.accenture.com/lv-en)** - *provider of the opportunity to learn how to make this project*
+* **[Riga TechGirls](http://www.rigatechgirls.org/)** - *provider of the opportunity to learn how to make this project* 
