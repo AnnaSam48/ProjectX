@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class UserInputOutput {
+
     int score;
 
     public String getUserInput() {

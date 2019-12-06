@@ -9,14 +9,13 @@ public class Game {
     int sumValue =0;
 
     public void createTile() {
-        
+
         while (true) {
-            int rowIndex = (int) (Math.random() * (ROWCOUNT - 1));
-            int columnIndex = (int) (Math.random() * (COLUMNCOUNT - 1));
+            int rowIndex = (int) (Math.random() * (ROWCOUNT));
+            int columnIndex = (int) (Math.random() * (COLUMNCOUNT));
             if (board[rowIndex][columnIndex] == 0) {
                 board[rowIndex][columnIndex] = newTileGenerated;
                 tilesWithValue++;
-
                 return;
             }
         }
@@ -144,10 +143,6 @@ public class Game {
         Game newGame = new Game();
         newGame.createTile();
         boardPrinter.printBoard(newGame.board, newGame.getScore());
-
-       // newGame.printBoard();
-
-
         String userMoveInput = userInputOutput.getUserInput();
 
         while (!userMoveInput.equals("?")) {
