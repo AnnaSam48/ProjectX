@@ -4,13 +4,13 @@
 
 ### Prerequisites
 
-Game runs from any Java development interface.
+Game runs from any integrated development environment  for Java.
 
 ## Built With
 
-* [IntelliJ IDEA](https://www.jetbrains.com/idea/documentation/) -  integrated development environment  for Java
-* [Eclipse](https://www.eclipse.org/downloads/packages/release/kepler/sr1/eclipse-ide-java-developers) -  integrated development environment  for Java
-* [Java](https://java.com/en/download/faq/develop.xml) - Dependency Management
+* [IntelliJ IDEA](https://www.jetbrains.com/idea/documentation/) -  integrated development environment  for Java.
+* [Eclipse](https://www.eclipse.org/downloads/packages/release/kepler/sr1/eclipse-ide-java-developers) -  integrated development environment  for Java.
+* [Java](https://java.com/en/download/faq/develop.xml) - Dependency Management.
 
 ## Versioning
 
