@@ -12,6 +12,7 @@ Game runs from any integrated development environment  for Java.
 * [Eclipse](https://www.eclipse.org/downloads/packages/release/kepler/sr1/eclipse-ide-java-developers) -  integrated development environment  for Java.
 * [Java](https://java.com/en/download/faq/develop.xml) - Dependency Management.
 
+
 ## Versioning
 
 We use [GitHub](https://github.com/) for versioning. For the versions available, see the [tags on this repository](https://github.com/AnnaSam48/ProjectX). 
@@ -26,4 +27,5 @@ We use [GitHub](https://github.com/) for versioning. For the versions available,
 
 * **Gabriele Cirulli** - *original creator of the game*
 * **Jurijs Grabovskis** - *SGT Java 2 group teacher and mentor and major help with this project*
-* **Accenture Latvia** - *provider of the opportunity to learn how to make this project*
+* **Accenture Latvia** - *provider of the opportunity to learn how to make this project* (https://www.accenture.com/lv-en)
+* **Riga TechGirls** - *provider of the opportunity to learn how to make this project* (http://www.rigatechgirls.org/)
