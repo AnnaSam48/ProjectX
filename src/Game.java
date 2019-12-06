@@ -7,7 +7,6 @@ public class Game {
     int newTileGenerated = 2;
     int score =0;
     int sumValue =0;
-    UserInputOutput userInputOutput = new UserInputOutput();
 
     public void createTile() {
         
@@ -17,7 +16,7 @@ public class Game {
             if (board[rowIndex][columnIndex] == 0) {
                 board[rowIndex][columnIndex] = newTileGenerated;
                 tilesWithValue++;
-                    //add method from UserInputOutput Class with end game message and final score
+
                 return;
             }
         }
@@ -29,6 +28,7 @@ public class Game {
                 board[tilesWithValue][currentCol] == board[currentRow][currentCol]) {
             if (currentRow > tilesWithValue ||
                     (verticalMovement && (tilesWithValue > currentRow))) {
+                sumValue =board[tilesWithValue][currentCol]*2;
                 board[tilesWithValue][currentCol] += board[currentRow][currentCol];
                 board[currentRow][currentCol] = 0;
                 score += sumValue;
@@ -50,6 +50,7 @@ public class Game {
                 board[currentRow][tilesWithValue] == board[currentRow][currentCol]) {
             if (currentCol > tilesWithValue ||
                     (verticalMovement && (tilesWithValue > currentCol))) {
+                sumValue = board[currentRow][tilesWithValue]*2;
                 board[currentRow][tilesWithValue] += board[currentRow][currentCol];
                 board[currentRow][currentCol] = 0;
                 score +=  sumValue;
@@ -139,13 +140,14 @@ public class Game {
 
 
         BoardPrinter boardPrinter = new BoardPrinter();
+        UserInputOutput userInputOutput = new UserInputOutput();
         Game newGame = new Game();
         newGame.createTile();
         boardPrinter.printBoard(newGame.board, newGame.getScore());
 
        // newGame.printBoard();
 
-        UserInputOutput userInputOutput = new UserInputOutput();
+
         String userMoveInput = userInputOutput.getUserInput();
 
         while (!userMoveInput.equals("?")) {
@@ -172,8 +174,3 @@ public class Game {
         }
     }
 }
-
-//
-//                if((userInput.equals('w')||(userInput.equals('a')) || (userInput.equals('s') ||(userInput.equals('d'))){
-//                    isValid = true;
-//                    return userInput;

@@ -36,8 +36,4 @@ public class BoardPrinter {
         System.out.println(line9);
         System.out.println("score = " + score);
     }
-
-//    BoardPrinter boardPrinter = new BoardPrinter();
-//        boardPrinter.printBoard(boardData);
-//        System.out.println("\n");
 }
