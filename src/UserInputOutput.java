@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class UserInputOutput {
 
-    int score;
+
 
     public String getUserInput() {
         Scanner move = new Scanner(System.in);
@@ -11,8 +11,9 @@ public class UserInputOutput {
         return userInput;
     }
 
-    public void endGame() {
+    public void endGame(int score) {
         System.out.println("Congratulations!");
         System.out.println("Your score: " + score);
+        System.exit(0);
     }
 }

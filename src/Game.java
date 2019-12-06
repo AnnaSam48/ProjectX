@@ -1,3 +1,6 @@
+import java.awt.image.DirectColorModel;
+import java.util.Random;
+
 public class Game {
 
     final int ROWCOUNT = 4;
@@ -7,18 +10,61 @@ public class Game {
     int newTileGenerated = 2;
     int score =0;
     int sumValue =0;
+    UserInputOutput userInputOutput = new UserInputOutput();
 
     public void createTile() {
+        if (!isHasEmptyCell()) {
+            return;
+        }
 
         while (true) {
             int rowIndex = (int) (Math.random() * (ROWCOUNT));
             int columnIndex = (int) (Math.random() * (COLUMNCOUNT));
             if (board[rowIndex][columnIndex] == 0) {
-                board[rowIndex][columnIndex] = newTileGenerated;
+                board[rowIndex][columnIndex] = generateRandom();
                 tilesWithValue++;
+                if (!isAbleToMove()) {
+                    userInputOutput.endGame(getScore());
+                }
                 return;
             }
         }
+    }
+
+    private int generateRandom() {
+        return new Random().nextInt(10) == 7 ? 4 : 2;
+    }
+
+    private boolean isAbleToMove() {
+        for (int i = 0; i < board.length; i++) {
+            for (int j = 0; j < board.length - 1; j++) {
+                if (board[i][j] == board[i][j + 1]) {
+                    return true;
+                }
+            }
+        }
+
+        for (int i = 0; i < board.length - 1; i++) {
+            for (int j = 0; j < board.length; j++) {
+                if (board[j][i] == board[j][i + 1]) {
+                    return true;
+                }
+            }
+        }
+
+        return isHasEmptyCell();
+    }
+
+    private boolean isHasEmptyCell() {
+        boolean hasEmptyCell = false;
+        for (int i = 0; i < board.length; i++) {
+            for (int j = 0; j < board.length; j++) {
+                if (board[j][i] == 0) {
+                    hasEmptyCell = true;
+                }
+            }
+        }
+        return hasEmptyCell;
     }
 
     private int moveVertically(int currentRow, int currentCol, boolean verticalMovement) {
@@ -166,6 +212,7 @@ public class Game {
             newGame.createTile();
             boardPrinter.printBoard(newGame.board, newGame.getScore());
             userMoveInput = userInputOutput.getUserInput();
+
         }
     }
 }
