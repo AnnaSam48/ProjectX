@@ -1,4 +1,4 @@
-import java.awt.image.DirectColorModel;
+
 import java.util.Random;
 
 public class Game {
@@ -7,13 +7,13 @@ public class Game {
     final int COLUMNCOUNT = 4;
     int[][] board = new int[ROWCOUNT][COLUMNCOUNT];
     int tilesWithValue = 0;
-    int newTileGenerated = 2;
     int score =0;
     int sumValue =0;
     UserInputOutput userInputOutput = new UserInputOutput();
+   // BoardPrinter boardPrinter = new BoardPrinter();
 
     public void createTile() {
-        if (!isHasEmptyCell()) {
+        if (!hasEmptyCell()) {
             return;
         }
 
@@ -24,6 +24,8 @@ public class Game {
                 board[rowIndex][columnIndex] = generateRandom();
                 tilesWithValue++;
                 if (!isAbleToMove()) {
+                   // createTile();
+                    // boardPrinter.printBoard(board, getScore());
                     userInputOutput.endGame(getScore());
                 }
                 return;
@@ -44,7 +46,7 @@ public class Game {
             }
         }
 
-        for (int i = 0; i < board.length - 1; i++) {
+        for (int i = 0; i < board.length-1; i++) {
             for (int j = 0; j < board.length; j++) {
                 if (board[j][i] == board[j][i + 1]) {
                     return true;
@@ -52,15 +54,15 @@ public class Game {
             }
         }
 
-        return isHasEmptyCell();
+        return hasEmptyCell();
     }
 
-    private boolean isHasEmptyCell() {
+    private boolean hasEmptyCell() {
         boolean hasEmptyCell = false;
         for (int i = 0; i < board.length; i++) {
             for (int j = 0; j < board.length; j++) {
                 if (board[j][i] == 0) {
-                    hasEmptyCell = true;
+                     hasEmptyCell = true;
                 }
             }
         }
